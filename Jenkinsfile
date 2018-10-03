@@ -1,4 +1,5 @@
- pipeline {
+
+pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
@@ -49,6 +50,7 @@
                     kubeconfigId: 'kubeconfig',
                     configs: 'train-schedule-kube.yml',
                     enableConfigSubstitution: true
+                 )
             }
         }
     }
